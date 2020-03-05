@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-9 col-sm-10 finduser-clean p-sm-5 rounded" style="margin-top:120px; margin-bottom:60px;">
+
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <img *ngIf="this.finduser_current_view === 'find/id'" src="assets/img/find_id_active.gif"
+             alt="find id">
+        <img *ngIf="this.finduser_current_view !== 'find/id'" src="assets/img/find_id.png"
+             alt="find id" class="cursor_pointer"
+             (click)="finduserChangeView('find/id')">
+        <img *ngIf="this.finduser_current_view === 'find/pass'" src="assets/img/find_pass_active.gif"
+             alt="find pass">
+        <img *ngIf="this.finduser_current_view !== 'find/pass'" src="assets/img/find_pass.png"
+             alt="find pass" class="cursor_pointer"
+             (click)="finduserChangeView('find/pass')">
+        <!--<ul class="nav nav-tabs justify-content-center align-items-end pb-0 mb-0">-->
+          <!--<li class="nav-item border-top rounded">-->
+            <!--<a class="nav-link active">아이디 찾기</a>-->
+          <!--</li>-->
+          <!--<li class="nav-item border-top rounded">-->
+            <!--<a class="nav-link">비밀번호 찾기</a>-->
+          <!--</li>-->
+        <!--</ul>-->
+      </div>
+    </div>
+
+    <div class="row blue-border p-3">
+      <div class="col bg-white border rounded">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+<small class="text-info mb-3" style="font-size:0.75rem;" i18n>
+  이메일로 비밀번호가 발송됩니다.
+</small>
+
+<form method="get"
+      [formGroup]="findPassForm"
+      (ngSubmit)="this.findUserPassword()">
+  <input type="url"
+         class="form-control mt-3"
+         formControlName="user_id"
+         placeholder="아이디"
+         autocomplete="off"
+         maxlength="12"
+        id="findpass_user_id">
+
+  <input type="text"
+         class="form-control mt-2"
+         formControlName="user_name"
+         placeholder="이름"
+         autocomplete="off"
+         maxlength="20"
+         id="findpass_user_name">
+
+  <input type="email"
+         class="form-control mt-2"
+         formControlName="user_email"
+         placeholder="이메일"
+         autocomplete="off"
+         maxlength="40"
+         id="findpass_user_email">
+
+  <small  class="text-danger mb-1">
+    {{this.search_info_span}}
+  </small>
+
+  <hr>
+
+  <div class="text-center mb-4">
+    <img src="assets/img/search_button.gif"
+         alt="search button"
+         class="cursor_pointer text-center"
+         (click)="this.findUserPassword()"
+         style="height:40px;"
+        *ngIf="!this.message_being_sent">
+    <h4 class="text-danger"
+          *ngIf="this.message_being_sent" i18n>
+      메일 발송중입니다 <br>
+      잠시만 기다려주세요...
+    </h4>
+    <button class="d-none" type="submit"></button>
+  </div>
+
+</form>

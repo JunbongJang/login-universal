@@ -1,0 +1,15 @@
+p, span, li, h4, h1, label {
+  color: white;
+}
+
+li, label {
+  font-size: 0.8rem;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+.form-check > label, .form-check > input {
+  cursor: pointer;
+}

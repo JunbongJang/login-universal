@@ -1,0 +1,29 @@
+.blue-border {
+  /*border: 16px solid #4e55ff;*/
+  /*border-image: linear-gradient(to bottom, red, violet) 1 round;*/
+  /*border-radius:20px;*/
+  background: linear-gradient(dodgerblue,skyblue);
+  border-radius:20px
+}
+
+a.nav-link {
+  background: linear-gradient(lightgray, gray);
+  color: black;
+}
+
+a.nav-link.active {
+  background: linear-gradient(dodgerblue, deepskyblue);
+  color: white;
+  height: 50px;
+}
+
+.finduser-clean {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 576px) {
+  .finduser-clean {
+    background-color:rgba(255,255,255,0.56);
+    max-width:460px;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="login-clean" style="background-color:rgba(241,247,252,0);padding-top:110px;padding-bottom:60px;">
+  <form method="post"
+        style="padding-top:40px;background-color:rgba(14,14,14,0.56);max-width:400px;margin-top:10px;"
+        [formGroup]="loginForm"
+        (ngSubmit)="this.loginUser()"
+        autocomplete="off">
+    <h1 class="text-center mb-4">
+      <i class="fa fa-lock" style="font-size:120px; color: #fa5e73;"></i>
+    </h1>
+    <div class="form-group">
+      <input class="form-control"
+             type="email"
+             formControlName="user_id"
+             name="id"
+             placeholder="ID"
+             autocomplete="off"
+             maxlength="12">
+    </div>
+    <div class="form-group mb-1">
+      <input class="form-control"
+             type="password"
+             formControlName="user_pass"
+             name="pass"
+             placeholder="Password"
+             autocomplete="off"
+             maxlength="10">
+    </div>
+    <small *ngIf="this.login_failed" class="text-danger" i18n>아이디 혹은 비밀번호를 잘못 입력하셨거나 <br> 등록되지 않은 아이디 입니다</small>
+
+    <!--<label><input type="checkbox" value="">아이디 저장</label>-->
+    <div class="form-group mt-3">
+      <button class="btn btn-danger btn-block btn-lg" type="submit" i18n>로그인</button>
+    </div>
+    <!--(click)="this.viewStateChoose('find')"-->
+    <!--(click)="this.viewStateChoose('signup')"-->
+    <a target="_blank" data-bs-hover-animate="tada" class="forgot" i18n>아이디/패스워드 찾기</a>
+    <a target="_blank" data-bs-hover-animate="tada" class="forgot mt-1" i18n>회원가입</a>
+  </form>
+</div>

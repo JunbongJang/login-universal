@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="0e7bfc3c870fcc10dd99d18ebba5b43346842f20" datatype="html">
+        <source>&gt;&gt;약관</source>
+        <target>&gt;&gt;Terms of Agreement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0282efbc272faff9576681b350b43f51d03a68e7" datatype="html">
+        <source>(주) 마이멘토 (웰이스턴) 에 가입하시려면 우선 아래의 약관에 동의하셔야 합니다.</source>
+        <target>You need to agree below in order sign up for WellEastern Account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d380ed0eaad96708fc299a78223d3be9cb92ff6a" datatype="html">
+        <source>아래의 이용약관을 꼭 읽어보시고 도의 여부를 결정하시기 바랍니다.</source>
+        <target>Please read terms of use below before you decide to signup.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="48f1c021a78d17ede7a18960ff4d62593022cbc8" datatype="html">
+        <source>이용약관에 동의합니다.</source>
+        <target>I agree to terms of use.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca22c879d65b2c5d1f771c04138d63e9b4d35732" datatype="html">
+        <source>이용약관에 동의하지 않습니다.</source>
+        <target>I disagree to terms of use.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d0a1059f39d8401b0abb08b6a51cac436bff15f6" datatype="html">
+        <source>개인정보 제공에 동의합니다.</source>
+        <target>I agree to provide a privacy information.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">293</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="97fd21137cce9aba86267e66de7f529c4975b70d" datatype="html">
+        <source>개인정보 제공에 동의하지 않습니다.</source>
+        <target>I agree to provide a privacy information.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">302</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="702aa622c72b7825dcf5692eb2b423467a581389" datatype="html">
+        <source>학생</source>
+        <target>Student</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0d485987dd1d1170a216abd5b1d6b4ed43330f70" datatype="html">
+        <source>학부모</source>
+        <target>Parent</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">324</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b418a6aebcbfcac956ed089dab191666149923dc" datatype="html">
+        <source>교사</source>
+        <target>Teacher</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">333</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4003d7e83c10876a98a1a40dfa12c4482492c821" datatype="html">
+        <source>
+            회원가입 다음단계로</source>
+        <context-group purpose="location">
+        <target>Next Step</target>
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">343</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f9963f4f773e1388efdfdcd48b795a0a3f35e27d" datatype="html">
+        <source>
+            탈퇴/인증취소
+          </source>
+          <target>Delete my Account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/signup/agree/agree.component.ts</context>
+          <context context-type="linenumber">349</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3b62685a12134d5487f2ed572d4f96d59890a644" datatype="html">
+        <source>로그인</source>
+         <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a06d827e6d38476f4678c5dfa0dfe43ec42317b6" datatype="html">
+          <source>회원가입</source>
+          <target>Signup</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/header/header.component.ts</context>
+            <context context-type="linenumber">21</context>
+          </context-group>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/login/login.component.ts</context>
+            <context context-type="linenumber">32</context>
+          </context-group>
+          <context-group purpose="location">
+            <context context-type="sourcefile">app/signup/signup-header/signup-header.component.ts</context>
+            <context context-type="linenumber">6</context>
+          </context-group>
+        </trans-unit>
+      <trans-unit id="b55420007c1bf34da0da396e801e5405060eb9f4" datatype="html">
+        <source>ID/PW 찾기</source>
+         <target>Find ID/PW</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="009825b577d5010c8e4b91c9ee46d54cd77c6b85" datatype="html">
+        <source>아이디 혹은 비밀번호를 잘못 입력하셨거나 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> 등록되지 않은 아이디 입니다</source>
+         <target>Incorrect ID or Password <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> or not registered id.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="36b798fddd5a4939c640fcb71d937e9516a28038" datatype="html">
+        <source>아이디/패스워드 찾기</source>
+        <target>Find ID/PW</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="06a9b0c82da71193f4353a89f68a3b9a80f45ea2" datatype="html">
+        <source>상호 : 주식회사 마이멘토</source>
+        <target>Edith English CO.,LTD</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e16aa4d8fb4a19bea9e95b94b77f1b0f4d0dfb90" datatype="html">
+        <source>대표 : 장용태</source>
+        <target>Manager : Harry.Jang</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a7e2fdaf2c4335d6d91edc59960e3b2b09268539" datatype="html">
+        <source>주소 : 서울특별시 중랑구 동일로 634</source>
+        <target>Headquarters/Research Lab Address : Amherst, MA 01003, USA</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ac2979b6eb98ba0614c57f8fd974e820f8106765" datatype="html">
+        <source>사업자등록번호 : 755-87-00208</source>
+        <target>地址 : 北京巿 诲淀区 学府树家园二区8号楼</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c68acbdfd6d519e16a5bd162be723872d0f4ad68" datatype="html">
+        <source>
+          이름과 이메일을 입력하시면 아이디를 찾으실 수 있습니다.
+        </source>
+        <target>Find your ID by submitting ID and Email.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/finduser/findid/findid.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92fbc6b1215143ca03c6d313ec24d38578287fd2" datatype="html">
+        <source>
+  이메일로 비밀번호가 발송됩니다.
+</source>
+<target>Password will be sent to your email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/finduser/findpass/findpass.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8429b8b66b3c5a0044623dd10424ebfe6e2d8f15" datatype="html">
+        <source>
+      메일 발송중입니다 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      잠시만 기다려주세요...
+    </source>
+     <target>Sending Email, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+              Please Wait..
+            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/finduser/findpass/findpass.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

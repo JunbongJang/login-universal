@@ -1,0 +1,41 @@
+<small class="text-info mb-3" style="font-size:0.75rem;" i18n>
+  이름과 이메일을 입력하시면 아이디를 찾으실 수 있습니다.
+</small>
+
+<form method="get"
+      [formGroup]="findIDForm"
+      (ngSubmit)="this.findUserID()">
+  <input type="text"
+         class="form-control mt-3"
+         formControlName="user_name"
+         placeholder="이름"
+         autocomplete="off"
+         maxlength="20"
+         id="findid_user_name">
+
+  <input type="email"
+         class="form-control mt-2"
+         formControlName="user_email"
+         placeholder="이메일"
+         autocomplete="off"
+         maxlength="40"
+         id="findid_user_email">
+
+  <small  class="text-danger mb-1">
+    {{this.search_info_span}}
+  </small>
+
+  <hr>
+
+  <div class="text-center mb-4">
+    <img src="assets/img/search_button.gif"
+         alt="search button"
+         class="cursor_pointer text-center"
+         (click)="this.findUserID()"
+         style="height:40px;">
+    <button class="d-none" type="submit"></button>
+  </div>
+
+</form>
+
+

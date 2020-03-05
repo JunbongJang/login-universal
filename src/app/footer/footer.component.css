@@ -1,0 +1,49 @@
+footer.footer_wrap{
+  background:#00335a;
+  margin: 0 auto;
+}
+
+p>span.ad_np{
+  padding-left:0;
+  border-right: 1px solid #7d8f9d;
+}
+
+p>span.ad_nnp{
+  padding-left:0;
+}
+
+span.ad_nbg{
+  background:none;
+  border-right: none;
+}
+
+address{
+}
+
+p{
+  font-size:13px;
+  color:#a6b8c6;
+}
+p>span{
+  font-size:13px;
+  color:#7d8f9d;
+  line-height:2.2;
+  padding-right:15px;
+  padding-left:10px;
+}
+
+p>span.ad_np{
+  padding-left:0;
+}
+
+p>span.ad_nbg{
+  background:none;
+}
+
+small{
+  color:#7d8f9d;
+  font-size:12px;
+  font-family:'arial', sans-serif;
+}
+
+

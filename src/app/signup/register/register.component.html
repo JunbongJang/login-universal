@@ -1,0 +1,355 @@
+<div class="row mt-2 pb-sm-3 pb-1 pt-4 rounded blue_background">
+  <div class="col">
+    <form #signup_form="ngForm" action="/user/php/join_ok.php" method="post" name="join_form" enctype="multipart/form-data" >
+      <input type="hidden" name="join_type" value="student">
+
+
+    <div class="pl-lg-4 pr-lg-4 pl-sm-3 pr-sm-3 pl-0 pr-0 pt-sm-2 pt-0 pb-4 rounded" style="background-color:white;">
+
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <i class="fa fa-caret-right" style="font-size:30px;color:green;"></i>
+          <span class="ml-2 d-inline">아이디 / 비밀번호</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 아이디(ID)</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="text" class="form-control form-control-sm"
+                 name="id"
+                 maxlength="12"
+                 [(ngModel)]="this.login_info.user_id"
+                 required>
+          <button class="btn btn-secondary btn-sm mt-1 mr-2" type="button" (click)="checkOpenUserID();">
+            중복체크
+          </button>
+          <span class="text-muted small">※ 6~12자의 영문소문자, 숫자, '_', '-' 만 가능합니다.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 비밀번호</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="password"
+                 class="form-control form-control-sm"
+                 name = "pass"
+                 maxlength="10"
+                 required
+                 [(ngModel)]="this.login_info.user_password"
+                 aria-describedby="user_password">
+          <span class="text-muted small">※ 6~10자의 영문, 숫자만 가능합니다.</span>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 비밀번호 확인</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="password"
+                 class="form-control form-control-sm"
+                 name = "pass_ok"
+                 maxlength="10"
+                 required
+                 [(ngModel)]="this.login_info.user_password_confirm"
+                 aria-describedby="user_password_confirm">
+        </div>
+      </div>
+
+
+      <!--another section-->
+
+
+      <div class="row mt-4">
+        <div class="col d-flex align-items-center">
+          <i class="fa fa-caret-right" style="font-size:30px;color:green;"></i>
+          <span class="ml-2 d-inline">개인정보 및 연락처</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 이름</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="text"
+                 class="form-control form-control-sm"
+                 name="name"
+                 maxlength="35"
+                 required
+                 [(ngModel)] = "this.contact_info.name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 학원선택</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+
+          <!--<div class="form-check mt-2">-->
+            <!--<input class="form-check-input"-->
+                   <!--type="checkbox"-->
+                   <!--name="is_demo"-->
+                   <!--[(ngModel)] = "this.contact_info.academy_none"-->
+                   <!--(ngModelChange)="toggleIsAcademy()"-->
+                   <!--id="is_demo">-->
+            <!--<label class="form-check-label" for="is_demo">-->
+              <!--체험하기-->
+            <!--</label>-->
+          <!--</div>-->
+
+          <span class="text-muted small">* 경기북부 소속 학원은 경기서부본부 선택,</span>
+          <br>
+          <span class="text-muted small">* 충남본부 소속 학원은 (신)충남본부 선택</span>
+          <br>
+          <div class="row mt-1 justify-content-start">
+
+            <div class="col-md-6 col-lg-5 mb-2">
+              <select name="head"
+                      class="form-control"
+                      [(ngModel)] = "this.contact_info.academy_head"
+                      (ngModelChange)="populateAcademyNames()">
+                <option value="">본부선택</option>
+                <option [value]="a_head.value" *ngFor="let a_head of this.head_array">
+                  {{a_head.name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="col-md-6 col-lg-5 ">
+              <select name="academy"
+                      class="form-control"
+                      [(ngModel)] = "this.contact_info.academy_name"
+                      (ngModelChange)="getAcademyCode()">
+                <option value="">학원선택</option>
+                <option [value]="a_academy.value" *ngFor="let a_academy of this.academy_array">
+                  {{a_academy.name}}
+                </option>
+
+              </select>
+            </div>
+
+          </div>
+
+
+
+
+          <input type="text"
+                 class="form-control form-control-sm mt-2"
+                 name="code"
+                 maxlength="50"
+                 [(ngModel)] = "this.contact_info.academy_code"
+                 (ngModelChange)="checkAcademyCode($event)"
+                placeholder="학원코드">
+
+          <div class="alert alert-danger mt-2" role="alert" id="code_response" style="display: none;">
+            학원코드가 잘못되었습니다.
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 전화번호</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type='tel'
+                 pattern="[0-9\-]+"
+                 name="phone1"
+                 maxlength="30"
+                 class="form-control form-control-sm"
+                 required>
+          <span class="text-muted small">※ ‘-’ 포함하여 작성하여 주시기 바랍니다.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 핸드폰번호</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type='tel'
+                 pattern="[0-9\-]+"
+                 name="phone2"
+                 maxlength="30"
+                 class="form-control form-control-sm">
+          <span class="text-muted small">※ ‘-’ 포함하여 작성하여 주시기 바랍니다.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* E-mail</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="email"
+                 class="form-control form-control-sm"
+                 name="email"
+                 maxlength="100"
+                 required>
+          <span class="text-danger small">※ 아이디, 비밀번호 찾기시 필요하므로 정확한 이메일을 입력하세요.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">* 주소</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <div class="form-inline">
+          <input type="number"
+                 class="form-control form-control-sm mr-2"
+                 name="zipcode"
+                 maxlength="16"
+                 placeholder="우편번호"
+                 required
+                 [(ngModel)] = "this.contact_info.zipcode">
+          <button id="form_address_find"
+                 name="form_address_find"
+                 class="btn btn-sm btn-secondary"
+                 type="button"
+                 (click)="execDaumPostcode()">
+            주소찾기
+          </button>
+          </div>
+          <input type="text"
+                 class="form-control form-control-sm mt-2"
+                 name="address1"
+                placeholder="주소1"
+                 maxlength="80"
+                 required
+                 [(ngModel)] = "this.contact_info.address1">
+          <input type="text"
+                 class="form-control form-control-sm mt-2"
+                 name="address2"
+                 placeholder="주소2"
+                 maxlength="80"
+                 id="form_address2"
+                 required
+                 [(ngModel)] = "this.contact_info.address2">
+        </div>
+      </div>
+
+
+      <!--another section 2-->
+
+
+      <div class="row mt-4">
+        <div class="col d-flex align-items-center">
+          <i class="fa fa-caret-right" style="font-size:30px;color:green;"></i>
+          <span class="ml-2 d-inline">추가정보</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">사진</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <img src="" alt="photo" style="height: 100px;" name="photo" #photo_display>
+          <input name="image" type="file"
+                 class="form-control-file mt-2"
+                 [(ngModel)]="this.additional_info.photo"
+                 #image_input
+                 (ngModelChange)="uploadPhoto(photo_display, image_input)"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">학부모</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <select id="form_parents_select" name="parent" class="form-control form-control-sm">
+            <option value="" selected="selected">Choose a relationship</option>
+            <option value="1">아버지</option>
+            <option value="2">어머니</option>
+            <option value="3">할아버지</option>
+            <option value="4">할머니</option>
+            <option value="5">기타</option>
+          </select>
+          <input type="text"
+                 class="form-control form-control-sm mt-2"
+                 maxlength="30"
+                 name="parent_etc">
+          <span class="text-muted small">※ 기타항목 선택 시 box안에 기입하여 주시기 바랍니다.</span>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">학부모 핸드폰번호</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type='tel'
+                 pattern="[0-9\-]+"
+                 class="form-control form-control-sm"
+                 maxlength="30"
+                 name="phone">
+          <span class="text-muted small">※ ‘-’ 포함하여 작성하여 주시기 바랍니다.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">학교</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom" style="background-color: #fdfdfd;">
+          <input type="text"
+                 class="form-control form-control-sm"
+                 maxlength="20"
+                 name="school_name">
+          <select id="form_school_select"
+                  name="school_type"
+                  class="form-control form-control-sm mt-2">
+            <option value="0" selected="selected">Choose your school</option>
+            <option value="1">초등학교</option>
+            <option value="2">중학교</option>
+            <option value="3">고등학교</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-4 d-flex align-items-center border-bottom" style="background-color: #f6f6f6;">
+          <span class="small" style="vertical-align: middle;">학년 / 반</span>
+        </div>
+        <div class="col-lg-9 col-8 p-2 border-bottom form-inline" style="background-color: #fdfdfd;">
+          <input type="number"
+                 maxlength="4"
+                 class="form-control form-control-sm"
+                 name="grade">
+          <span class="mx-2 small"> 학년</span>
+          <input type="number"
+                 maxlength="4"
+                 class="form-control form-control-sm mt-2"
+                 name="class">
+          <span class="ml-2 small"> 반</span>
+        </div>
+      </div>
+
+      <!--last section-->
+
+      <button class="btn btn-outline-primary btn-block mt-4" type="button" (click)="join_check()">회원가입</button>
+    </div>
+
+    </form>
+
+  </div>
+</div>

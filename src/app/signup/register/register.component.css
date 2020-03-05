@@ -1,0 +1,40 @@
+.arrow-right {
+  width: 20px;
+  height: 10px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid green;
+}
+
+.form-check > label, .form-check > input, input[type="file"] {
+  cursor: pointer;
+}
+
+
+hr {
+  margin-top: .4rem;
+  margin-bottom: .0rem;
+  border-top: 2px solid rgba(22, 0, 246, 0.73);
+}
+
+
+.blue_background {
+  background: white;
+}
+
+@media (min-width: 576px) {
+  .blue_background {
+    background: rgb(3,142,200);
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .form-control {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1200px) { }
