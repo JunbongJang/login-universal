@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+input[type=radio] {
+  width: 15px;
+  height: 15px;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.nav_top_margin {
+  margin-top: 30px;
+}
+
+input.ng-invalid.ng-touched {
+  background-color: #ffbfbc !important;
+  border: 1px solid #ff8289 !important;
+}
+
+.index_background_image {
+  background: url(assets/img/background_ballon.png);
+  background-size: auto;
+}

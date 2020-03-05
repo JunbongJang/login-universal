@@ -19,8 +19,17 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@ngrx/store": "^8.6.0",
+    "@types/jquery": "^3.3.31",
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.4.1",
+    "bowser": "^2.8.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "url-polyfill": "^1.1.8",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
