@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   public isCollapsed = false;
   public header_view_state = '';
+  public environment_chinese = environment.chinese;
 
   constructor(private store: Store<fromApp.AppState>) { }
 

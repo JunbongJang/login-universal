@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  chinese: true
+  chinese: false
 };

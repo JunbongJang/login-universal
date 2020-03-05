@@ -159,6 +159,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "login-universal"
+    }
+  },
+  "defaultProject": "login-universal",
+  "cli": {
+    "analytics": "ab8506bf-bb7a-4b1a-af3b-d752a2419cef"
+  }
 }

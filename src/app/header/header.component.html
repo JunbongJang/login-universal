@@ -16,13 +16,15 @@
           (click)="viewStateChoose('login')" i18n>로그인</a>
         </li>
         <li class="nav-item" [ngClass]="header_view_state === 'signup/register' || header_view_state === 'signup/agree' ? 'active' : ''">
-          <a class="nav-link disabled" style="font-weight:bold;"
+          <a class="nav-link" [ngClass]="environment_chinese ? 'disabled' : ''"
+             style="font-weight:bold;"
              (click)="viewStateChoose('signup')"
              i18n>회원가입</a>
           <!--(click)="viewStateChoose('signup')"-->
         </li>
         <li class="nav-item" [ngClass]="header_view_state === 'find/pass'  || header_view_state === 'find/id' ? 'active' : ''">
-          <a class="nav-link disabled" style="font-weight:bold;"
+          <a class="nav-link" [ngClass]="environment_chinese ? 'disabled' : ''"
+             style="font-weight:bold;"
              (click)="viewStateChoose('find')"
              i18n>ID/PW 찾기</a>
           <!--(click)="viewStateChoose('find')"-->
